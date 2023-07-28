@@ -20,6 +20,7 @@ public class C06_QDLoginTest {
         // 4- Kullanici sifresi olarak valid sifre girin
         qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
         // 5- Login butonuna basarak login olun
+
         qdPage.loginButonu.click();
         // 6- Basarili olarak giris yapilabildigini test edin
 

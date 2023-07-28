@@ -35,6 +35,8 @@ public class C02_FacebookTesti {
 
         Assert.assertTrue(facebookPage.basarisizGirisyaziElementi.isDisplayed());
 
+
+
         Driver.closeDriver();
     }
 

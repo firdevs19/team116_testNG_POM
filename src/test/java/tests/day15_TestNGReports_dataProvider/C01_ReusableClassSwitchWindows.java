@@ -9,30 +9,25 @@ import utilities.ReusableMethods;
 public class C01_ReusableClassSwitchWindows {
 
     @Test
-
     public void switchWindowTesti(){
-
 
         //https://the-internet.herokuapp.com/windows adresine gidin.
         Driver.getDriver().get("https://the-internet.herokuapp.com/windows");
-
         //Click Here butonuna basın.
         Driver.getDriver().findElement(By.xpath("//a[text()='Click Here']")).click();
 
-        //Acilan yeni pencerenin sayfa başlığının (title) "New Window" oldugunu dogrulayin.
+        //Acilan yeni pencerenin sayfa başlığının (title) “New Window” oldugunu dogrulayin.
+
         ReusableMethods.switchToWindow("New Window");
 
-        String actualTitle= Driver.getDriver().getTitle();
-        String expectedTitle="New Window";
+        String expectedTitle = "New Window";
+        String actualTitle = Driver.getDriver().getTitle();
 
-        Assert.assertEquals(expectedTitle,actualTitle);
-
+        Assert.assertEquals(actualTitle,expectedTitle);
 
         // sayfalari kapatin
         Driver.quitDriver();
 
 
     }
-
 }
-

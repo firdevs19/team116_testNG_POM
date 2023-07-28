@@ -1,4 +1,29 @@
 package pages;
 
-public class amazonPage {
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import utilities.Driver;
+
+public class AmazonPage {
+
+    public AmazonPage(){
+        //baska package daki classlarin bu constructor'i kullanabilmmeleri icin
+        //access modifier'ini public yapalim.
+
+        // bu page class'indan locate kullanacak tum class'lar
+        //AmazonPage class'indan obje olusturulmmali
+        //obje olusturmak icin de mutlaka bu Constructor calisacak
+        //o zaman bu class'da WebDriver'imizi tanimmlama isini
+        //bu constructor icinde yapabiliriz.
+
+        PageFactory.initElements(Driver.getDriver(),this);
+
+    }
+
+    @FindBy(id="twotabsearchtextbox")
+    public WebElement aramaKutusu;
+
+    @FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
+    public WebElement sonucYaziElementi;
 }
